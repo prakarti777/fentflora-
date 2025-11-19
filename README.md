@@ -1,4 +1,4 @@
-website full code provide we use html,CSS,JS and canva. 
+website full code provided. We use html,CSS,JS and canva. 
 
 ![Screenshot_19-11-2025_125917_127 0 0 1](https://github.com/user-attachments/assets/22ddc3f7-08ef-41cf-9700-e72770d14922)
 <img width="2245" height="1587" alt="1" src="https://github.com/user-attachments/assets/9ef211da-00e4-4bb0-8174-bc54df3faf87" />
