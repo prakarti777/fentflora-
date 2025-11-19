@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buy Juice</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Arial, sans-serif;
+    background: #b44721;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .buy-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  .buy-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  input, select, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  textarea { resize: vertical; }
+  button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+  button:hover { background: #218838; }
+  .confirmation {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+    color: #28a745;
+    font-size: 18px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<div class="buy-container">
+  <h2>Order Your Juice</h2>
+  <form id="buyForm">
+    <label>Juice Name</label>
+    <select required>
+      <option value="">Select Juice</option>
+      <option value="Apple Juice">Apple Juice</option>
+      <option value="Orange Juice">Orange Juice</option>
+      <option value="Mango Juice">Mango Juice</option>
+      <option value="Berry Juice">Berry Juice</option>
+      <option value="Lemon Juice">Lemon Juice</option>
+      <option value="Amla Juice">Amla Juice</option>
+      <option value="Watermelon Juice">Watermelon Juice</option>
+      <option value="Apple Mint Juice">Apple Juice</option>
+      <option value="Apple Mint Juice">PineApple Juice</option>
+    </select>
+
+    <label>Quantity</label>
+    <input type="number" min="1" placeholder="Enter quantity" required>
+
+    <label>Your Name</label>
+    <input type="text" placeholder="Enter your name" required>
+
+    <label>Address</label>
+    <textarea placeholder="Enter your full address" rows="3" required></textarea>
+
+    <label>Phone Number</label>
+    <input type="tel" placeholder="Enter your phone number" required>
+
+    <label>Payment Method</label>
+    <select required>
+      <option value="">Select Payment</option>
+      <option value="Cash on Delivery">Cash on Delivery</option>
+      <option value="UPI">UPI</option>
+      <option value="Credit/Debit Card">Credit/Debit Card</option>
+      <option value="Net Banking">Net Banking</option>
+    </select>
+
+    <button type="submit">Submit Order</button>
+    
+  </form>
+  <div class="confirmation" id="confirmationMessage">
+    Your order is confirmed! Thank you for visiting.<a href="index.html">return</a>
+  </div>
+</div>
+
+<script>
+  const form = document.getElementById('buyForm');
+  const confirmation = document.getElementById('confirmationMessage');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent form submission
+    confirmation.style.display = 'block'; // Show confirmation message
+    form.reset(); // Optional: reset form fields
+  });
+</script>
+
+</body>
+</html>
